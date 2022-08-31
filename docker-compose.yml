@@ -18,9 +18,9 @@ services:
     entrypoint: [ "/usr/bin/mongod", "--bind_ip_all", "--replSet", "dbrs" ]
 
   node_app:
-    build: ./node-project
+    # build: ./node-project
     container_name: node_app
-    image: node_app/latest
+    image: teqsk1514/cdc-node-app:v0
     depends_on:
       - mongo
     environment:
